@@ -7,4 +7,8 @@ start with React Native programming.
 The application will present the user with a timer (originally set at 25 minutes) that can be toggled up or down. Three buttons will allow the user to either start, stop, or reset
 the timer. Upon completion of the timer a sound will alert the user and a screen will display a message to remind the user to take a short break as per the techniques method.
 
+Initial Design:
 ![App Design](https://user-images.githubusercontent.com/65888709/153523048-9ac7260a-482a-46f5-92dd-7da290d24e38.png)
+
+Revisited Design:
+![App Design 2](https://user-images.githubusercontent.com/65888709/154775760-b1b1741a-0804-4a95-ab4b-e65b8c6b9737.png)
