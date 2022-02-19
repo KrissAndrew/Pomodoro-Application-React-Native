@@ -6,6 +6,7 @@ import Title from "./components/Title";
 // font imports
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+import MainScreen from "./screens/MainScreen";
 
 export default function App() {
   // Font loading configuration
@@ -13,7 +14,8 @@ export default function App() {
 
   const fetchFonts = async () => {
     await Font.loadAsync({
-      digital: require("./assets/fonts/digital-7.ttf"),
+      // so bs going on here with script names, capitilising as below made it work(?)
+      KaushanScript: require("./assets/fonts/KaushanScript-Regular.ttf"),
     });
     setFontLoaded(true);
   };
@@ -36,17 +38,20 @@ export default function App() {
       style={{
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flex: 1,
+        backgroundColor: "#49d0a3",
       }}
     >
+      <View style={styles.contentContainer}>
+        <MainScreen />
+      </View>
       <Title />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  contentContainer: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
