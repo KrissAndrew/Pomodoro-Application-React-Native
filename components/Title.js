@@ -7,7 +7,12 @@ const Title = () => {
 };
 
 const styles = StyleSheet.create({
-  title: { color: "white", fontSize: 30, textAlign: "center" },
+  title: {
+    color: "white",
+    fontSize: 30,
+    textAlign: "center",
+    padding: 5,
+  },
 });
 
 export default Title;

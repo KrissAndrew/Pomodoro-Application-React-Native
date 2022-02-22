@@ -33,6 +33,13 @@ export default function App() {
       />
     );
   }
+
+  let content = (
+    <View style={styles.contentContainer}>
+      <MainScreen />
+    </View>
+  );
+
   return (
     <View
       style={{
@@ -41,9 +48,7 @@ export default function App() {
         backgroundColor: "#49d0a3",
       }}
     >
-      <View style={styles.contentContainer}>
-        <MainScreen />
-      </View>
+      {content}
       <Title />
     </View>
   );

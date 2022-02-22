@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, Dimensions } from "react-native";
 import Timer from "../components/Timer";
 
 const MainScreen = () => {
@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageContainer: {
-    width: 200,
-    height: 200,
-    borderRadius: 150,
+    width: Dimensions.get("window").width * 0.6,
+    height: Dimensions.get("window").width * 0.6,
+    borderRadius: (Dimensions.get("window").width * 0.7) / 2,
     overflow: "hidden",
-    marginVertical: 30,
+    marginVertical: Dimensions.get("window").height > 600 ? 30 : 10,
   },
-  image: { width: "100%", height: "100%" },
-  BtnContainer: {
-    marginTop: 10,
+  image: {
+    width: "100%",
+    height: "100%",
   },
 });
 

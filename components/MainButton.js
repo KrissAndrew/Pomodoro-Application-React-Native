@@ -1,7 +1,13 @@
 // more stylistic freedom with custom buttons
 
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 
 const MainButton = (props) => {
   return (
@@ -18,10 +24,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
+    alignItems: "center",
   },
   buttonText: {
     color: "white",
-    fontSize: 18,
+    fontSize: Dimensions.get("window").width > 330 ? 25 : 18,
   },
 });
 
